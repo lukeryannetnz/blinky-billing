@@ -6,3 +6,7 @@ A simple billing system for me to experiment with different tools and technologi
 1. Refamiliarise myself with c# and .net and learn the latest features.
 2. Experiment with different tools and technologies e.g. github copilot, aws serverless etc.
 3. Have fun writing code.
+
+## Tech
+This solution uses the following technologies
+- .net SDK 9.0.100-preview.4

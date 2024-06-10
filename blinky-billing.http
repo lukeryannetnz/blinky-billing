@@ -1,0 +1,6 @@
+@blinky_billing_HostAddress = http://localhost:5044
+
+GET {{blinky_billing_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
