@@ -7,7 +7,7 @@ public class IntegrationTests
 {
     private readonly WebApplicationFactory<Program> _factory;
 
-    protected IntegrationTests(WebApplicationFactory<Program> factory)
+    public IntegrationTests(WebApplicationFactory<Program> factory)
     {
         _factory = factory;
     }
@@ -24,6 +24,6 @@ public class IntegrationTests
 
         // Assert
         response.EnsureSuccessStatusCode(); // Status Code 200-299
-        Assert.Equal("application/json; charset=utf-8", response.Content.Headers.ContentType.ToString());
+        Assert.Equal("application/json; charset=utf-8", response.Content.Headers.ContentType?.ToString());
     }
 }
