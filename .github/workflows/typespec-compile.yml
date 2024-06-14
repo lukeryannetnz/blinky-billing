@@ -1,6 +1,6 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, then run the typespec compile step to ensure the typespec file is well formed and can generate an openapi spec.
 
-name: Node.js CI
+name: Typespec CI
 
 on:
   push:
@@ -12,6 +12,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./api/apispec
 
     strategy:
       matrix:
@@ -25,6 +28,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: cd /api/apispec
     - run: npm ci
     - run: npx tsp compile --debug=true --warn-as-error .
