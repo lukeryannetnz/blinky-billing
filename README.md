@@ -10,6 +10,7 @@ A simple billing system for me to experiment with different tools and technologi
 ## Tech
 This solution uses the following technologies
 - .net SDK 9.0.100-preview.4
+- [typespec](https://typespec.io/docs) for API first descriptions
 
 ## High level domain model
 Billing as a domain is complex. Here is a high level map of the domain and the different contexts within it.
